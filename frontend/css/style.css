@@ -170,7 +170,7 @@ section {
   opacity: 0.9;
 }
 
-.post {
+.postExtendend {
 
   background-color: #ffffff;
   border-radius: 1.5rem;
@@ -180,13 +180,13 @@ section {
   box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.911);
 }
 
-.post h2 {
+.postExtendend h2 {
   font-size: 2.3rem;
   padding: 1rem 1rem;
   margin-right: 2rem;
 }
 
-.post .ToolsPostIcons i {
+.postExtendend .ToolsPostIcons i {
   position: absolute;
   font-size: 2rem;
   padding: 1rem;
@@ -201,12 +201,12 @@ section {
   right: 60px;
 }
 
-.post i:hover {
+.postExtendend i:hover {
   color: rgb(0, 0, 0);
   transform: scale(1.1);
 }
 
-.post .author {
+.postExtendend .author {
   border: 2px solid rgba(107, 103, 103, 0.219);
   display: flex;
   align-items: center;
@@ -214,7 +214,7 @@ section {
   padding: 0rem 0.5rem;
 }
 
-.post .content {
+.postExtendend .content {
   text-align: justify;
   padding: 1rem;
   font-size: 1.2rem;
