@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  outline: none;
+  font-family: "Poppins";
+}
+
+html{
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(assets/background2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 90px;
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.555);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  
+}
+
+.header .titleBlog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header .titleBlog i {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.header .titleBlog h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+
+section {
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.NewPostBtn {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  padding: 3.5rem 0;
+}
+
+.NewPostBtn button {
+  font-family: "Poppins";
+  font-weight: 700;
+  background-color: black;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 320px;
+  height: 80px;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 10px rgb(255, 255, 255);
+  transition: 0.2s linear;
+}
+
+.NewPostBtn button:hover{
+  transform: scale(1.07);
+  color: #76c0f1;
+
+}
+
+.NewPostBtn button:active{
+  transform: scale(1);
+}
+
+.NewPost{
+  display: none;
+  margin-bottom: 2rem;
+  
+}
+
+.NewPost form{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.911);
+}
+
+.NewPost form label{
+ font-size: 1.4rem;
+ padding-top: 1rem;
+ text-transform: uppercase;
+}
+
+.NewPost form input{
+  color: #000000;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  border: 1.4px solid grey;
+}
+
+.NewPost form textarea{
+  color: #000000;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  border: 1.4px solid grey;
+  height: 250px;
+  resize: none;
+}
+
+.NewPost .ButtonsSaveCalcel{
+ padding-top: 1.5rem;
+ text-align: center;
+
+}
+
+.NewPost .ButtonsSaveCalcel button{
+  color: #fff;
+  border: none;
+  background-color: #5072f0;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  margin: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.NewPost .ButtonsSaveCalcel .red{
+  background-color: red;
+}
+
+.NewPost .ButtonsSaveCalcel button:hover{
+  opacity: 0.9;
+}
+
+.post {
+
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  font-family: "Poppins";
+  position: relative;
+  margin-bottom: 2.5rem;
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.911);
+}
+
+.post h2 {
+  font-size: 2.3rem;
+  padding: 1rem 1rem;
+  margin-right: 2rem;
+}
+
+.post .ToolsPostIcons i {
+  position: absolute;
+  font-size: 2rem;
+  padding: 1rem;
+  top: 3px;
+  right: 3px;
+  color: rgba(90, 86, 86, 0.616);
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+#trash{
+  right: 60px;
+}
+
+.post i:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+}
+
+.post .author {
+  border: 2px solid rgba(107, 103, 103, 0.219);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0rem 0.5rem;
+}
+
+.post .content {
+  text-align: justify;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+footer{
+  margin-top: auto
+}
+
+.footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 3.95rem;
+  color: #fff;
+  gap: 1rem;
+  font-size: 1rem;
+ 
+}
+
+.footer i{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .post {
+    width: 100vw;
+  }
+
+  section {
+    padding: 0rem;
+  }
+
+  .post h2 {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+  }
+}

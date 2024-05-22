@@ -1,7 +1,7 @@
 const validateBody = (req, res, next) =>{
     const {body} = req
 
-    if(body.title === undefined || body.author === undefined || body.content === undefined) {
+    if(body.title === undefined || body.author === undefined || body.content === undefined || body.picture === undefined)  {
       return  res.status(400).json({message: 'Campos obrigatorios!'})
     }
 
