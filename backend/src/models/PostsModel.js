@@ -1,5 +1,5 @@
 const connection = require('./connection')
-require('multer')
+
 
 const getAll = async () =>{
     const posts = await connection.execute('SELECT * FROM posts')
