@@ -3,7 +3,7 @@ const connection = require('./connection')
 
 const getAll = async () =>{
     const posts = await connection.execute('SELECT * FROM posts')
-    return posts[0]
+    return [posts]
 }
 
 const createPost = async (post) =>{
