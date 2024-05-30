@@ -11,7 +11,7 @@ const createPost = async (post) =>{
     
     const query = 'INSERT INTO posts(title, author, content, picture) VALUES (?,?,?,?)'
 
-    const [createdPost] = await connection.execute(query, [title,author,content, picture])
+    const createdPost = await connection.execute(query, [title,author,content, picture])
     
     return {insertId: createdPost.insertId}
 }
@@ -26,7 +26,7 @@ const updatePost = async (ID, post) =>{
     const query = 'UPDATE posts SET title=?, author=?, content=?, picture=? WHERE id = ?'
     const {title, author, content, picture} = post
 
-    const [updatedPost] = await connection.execute(query,[title, author, content,picture, ID])
+    const updatedPost = await connection.execute(query,[title, author, content,picture, ID])
     return updatedPost
 }
 
