@@ -14,15 +14,15 @@ const createPost = async (req, res) => {
 }
 
 const deletePost = async (req, res) =>{
-    const postId = parseInt(req.params.id)
-    await postsModel.deletePost(postId)
-    return res.status(204).json()
+
+    const removedPost = await postsModel.deletePost(req.params.id)
+    return res.status(204).json(removedPost)
 }
 
 const updatePost = async (req, res) =>{
-    const postId = parseInt(req.params.id)
-    await postsModel.updatePost(postId, req.body)
-    return res.status(204).json()
+    
+    const updatedPost = await postsModel.updatePost(req.params.id,req.body)
+    return res.status(204).json(updatedPost)
 }
 
 module.exports = {

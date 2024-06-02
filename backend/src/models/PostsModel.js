@@ -1,32 +1,53 @@
-const connection = require('./connection')
-
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 const getAll = async () =>{
-    const posts = await connection.execute('SELECT * FROM posts')
+    const posts = await prisma.posts.findMany()
     return [posts]
 }
 
 const createPost = async (post) =>{
     const {title, author, content, picture} = post
-    
-    const query = 'INSERT INTO posts(title, author, content, picture) VALUES (?,?,?,?)'
 
-    const createdPost = await connection.execute(query, [title,author,content, picture])
+    const randonNumber = Math.floor(Math.random()*1001)
+
+    const createdPost = await prisma.posts.create({
+        data: {
+            title: title,
+            author: author,
+            content: content,
+            picture: picture,
+            codigo: randonNumber
+        }
+    })
     
     return {insertId: createdPost.insertId}
 }
 
 const deletePost = async (ID) =>{
-    const removedPost = await connection.execute('DELETE FROM posts WHERE id=?',[ID])
+    const removedPost = await prisma.posts.delete({
+        where:{
+            id: ID
+        }
+    })
     return removedPost
 }
 
 
 const updatePost = async (ID, post) =>{
-    const query = 'UPDATE posts SET title=?, author=?, content=?, picture=? WHERE id = ?'
     const {title, author, content, picture} = post
 
-    const updatedPost = await connection.execute(query,[title, author, content,picture, ID])
+    const updatedPost = await prisma.posts.update({
+        where:{
+            id:ID
+        },
+       data: {
+            title: title,
+            author: author,
+            content: content,
+            picture: picture
+        }
+    })
     return updatedPost
 }
 
